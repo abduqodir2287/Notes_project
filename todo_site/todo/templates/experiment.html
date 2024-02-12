@@ -1,0 +1,97 @@
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <link rel="stylesheet" href="{% static 'expe.css' %}">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Document</title>-->
+<!--    <link rel="stylesheet" href="style.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--    <section class="section">-->
+<!--        <div class="leftSide">-->
+<!--            <div class="social">-->
+<!--            <h1 class="title">Become a member</h1>-->
+<!--            <p class="text">Use social networks to join us instantly <br>You won't spend any time confirming those boring emails</p>-->
+<!--            </div>-->
+
+<!--    <ul class="list">-->
+<!--        <li class="listItem">-->
+<!--            <img src="./img/googleplus.svg" class="icon" alt="logo">-->
+<!--            <h4 class="socialName">SING UP WITH GOOGLE+</h4>-->
+<!--        </li>-->
+<!--        <li class="listItem">-->
+<!--            <img src="./img/facebook.svg" class="icon" alt="logo">-->
+<!--            <h4 class="socialName">SING UP WITH FACEBOOK</h4>-->
+<!--        </li>-->
+
+<!--        <li class="listItem">-->
+<!--            <img src="./img/twitter.svg" class="icon" alt="logo">-->
+<!--            <h4 class="socialName">SING UP WITH TWITTER</h4>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--        <div class="leg">-->
+<!--            <hr class="chiziq">-->
+<!--            <p class="textLeg">You ca still sign up with your email address</p>-->
+<!--            <p class="button">SIGN UP WITH EMAIL</p>-->
+<!--        </div>-->
+<!--        </div>-->
+
+
+
+<!--        <div class="rightSide"></div>-->
+<!--    </section>-->
+<!--</body>-->
+<!--</html>-->
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'expe.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function signUpWithEmail() {
+            // You can replace the alert with your logic to navigate to another page or section
+            alert("Redirecting to sign up with email!");
+        }
+    </script>
+</head>
+<body>
+    <section class="section">
+        <div class="leftSide">
+            <div class="social">
+                <h1 class="title">Become a member</h1>
+                <p class="text">Use social networks to join us instantly <br>You won't spend any time confirming those boring emails</p>
+            </div>
+
+            <ul class="list">
+                <li class="listItem">
+                    <img src="https://github.com/abduqodir2287" class="icon" alt="logo">
+                    <h4 class="socialName">SUBSCRIBE WITH GITHUB</h4>
+                </li>
+                <li class="listItem">
+                    <img src="./img/facebook.svg" class="icon" alt="logo">
+                    <h4 class="socialName">SIGN UP WITH FACEBOOK</h4>
+                </li>
+                <li class="listItem">
+                    <img src="./img/twitter.svg" class="icon" alt="logo">
+                    <h4 class="socialName">MY TELEGRAM BOT</h4>
+                </li>
+            </ul>
+
+            <div class="leg">
+                <hr class="chiziq">
+                <p class="textLeg">You can still sign up with your email address</p>
+                <p class="button" onclick="signUpWithEmail()">SIGN UP WITH EMAIL</p>
+            </div>
+        </div>
+
+        <div class="rightSide"></div>
+    </section>
+</body>
+</html>

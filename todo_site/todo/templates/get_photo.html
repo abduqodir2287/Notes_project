@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload Example</title>
+    <style>
+        #filePreview {
+            max-width: 100%;
+            max-height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<p>Click on the "Choose File" button to upload a file:</p>
+
+<form id="uploadForm" action="/upload/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" id="myFile" name="filename" onchange="previewFile()">
+</form>
+
+<img id="filePreview" src="{% if uploaded_file %}{{ uploaded_file.url }}{% else %}{{ default_image_url }}{% endif %}" alt="File Preview">
+
+<script>
+    var defaultImageUrl = "{{ default_image_url }}";
+
+    function previewFile() {
+        var fileInput = document.getElementById('myFile');
+        var filePreview = document.getElementById('filePreview');
+
+        var file = fileInput.files[0];
+        var reader = new FileReader();
+
+        reader.onloadend = function () {
+            filePreview.src = reader.result;
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            filePreview.src = defaultImageUrl;
+        }
+    }
+
+    function uploadFile() {
+        document.getElementById("uploadForm").submit();
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <title>Sign up</title>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5),
+                        0 6px 20px 0 rgba(0, 0, 0, 0.39);
+            background: lightpink;
+            margin-bottom: 5%;
+            border-radius: 25px;
+            padding: 20px;
+            overflow: auto;
+            resize: both;
+            text-overflow: ellipsis;
+        }
+
+        .card:hover {
+            background: lightblue;
+        }
+
+        .submit_form {
+            text-align: center;
+            background: red;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4),
+                        0 6px 20px 0 rgba(0, 0, 0, 0.36);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .submit_btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="card">
+                    <form method="POST" class="submit_form">
+                        {% csrf_token %}
+                        {{ forms }}
+                        <div class="submit_btn">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
